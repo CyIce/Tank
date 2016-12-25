@@ -65,3 +65,15 @@ void generateTank(Tank tank)
 
 	glPopMatrix();
 }
+
+void generateShell(Tank tank)
+{
+	glPointSize(7.0f);
+
+	glColor3f(0.7, 0.5, 0.7);
+	glBegin(GL_POINTS);
+
+	glVertex3f(tank.position.x+10, tank.position.y, tank.position.z);
+
+	glEnd();
+}

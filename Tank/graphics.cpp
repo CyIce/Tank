@@ -11,7 +11,9 @@ void renderScene()
 	glClear(GL_COLOR_BUFFER_BIT);
 	//创建两个游戏玩家；
 	generateTank(player1);
+	generateShell(player1);
 	generateTank(player2);
+
 
 	glutSwapBuffers();
 }

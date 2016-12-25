@@ -1,8 +1,9 @@
 
 #include "keysInput.h"
 
+#include<stdio.h>
 
-void processSpecialKeys(int key, int x, int y)
+void player1SpecialKeys(int key, int x, int y)
 {
 	switch (key)
 	{
@@ -14,7 +15,7 @@ void processSpecialKeys(int key, int x, int y)
 	}
 }
 
-void processSpecialKeysUp(int key, int x, int y)
+void player1SpecialKeysUp(int key, int x, int y)
 {
 	switch (key)
 	{
@@ -26,19 +27,32 @@ void processSpecialKeysUp(int key, int x, int y)
 	}
 }
 
-void processKeys(unsigned char key, int x, int y)
+void player1Keys(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
-	case 'a':case 'A':	player2.increment = direction[0]; player2.direction = -90; break;
-	case 'd':case 'D':  player2.increment = direction[2]; player2.direction =  90; break;
-	case 's':case 'S':	player2.increment = direction[3]; player2.direction = 180; break;
-	case 'w':case 'W':	player2.increment = direction[1]; player2.direction =   0; break;
+	//玩家1发射子弹；
+	case 13:printf("test")	; break;
 	default:break;
 	}
 }
 
-void processKeysUp(unsigned char key, int x, int y)
+void player2Keys(unsigned char key, int x, int y)
+{
+	switch (key)
+	{
+	case 'a' :case 'A':	player2.increment = direction[0]; player2.direction = -90; break;
+	case 'd' :case 'D': player2.increment = direction[2]; player2.direction =  90; break;
+	case 's' :case 'S':	player2.increment = direction[3]; player2.direction = 180; break;
+	case 'w' :case 'W':	player2.increment = direction[1]; player2.direction =   0; break;
+
+	//玩家2发射子弹；
+	case 32:  printf("test"); break;
+	default:break;
+	}
+}
+
+void player2KeysUp(unsigned char key, int x, int y)
 {
 	switch (key)
 	{

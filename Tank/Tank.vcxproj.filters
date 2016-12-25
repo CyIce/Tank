@@ -30,10 +30,10 @@
     <ClInclude Include="my_struct.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="player.h">
+    <ClInclude Include="prefabs.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="prefabs.h">
+    <ClInclude Include="playerControl.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,10 +50,10 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="player.cpp">
+    <ClCompile Include="prefabs.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="prefabs.cpp">
+    <ClCompile Include="playerControl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

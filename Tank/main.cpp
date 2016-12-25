@@ -9,11 +9,8 @@ int main()
 	glutReshapeFunc(changeSize);
 	glutTimerFunc(20, playMoving, 1);
 
-	glutSpecialFunc(processSpecialKeys);
-	glutSpecialUpFunc(processSpecialKeysUp);
-
-	glutKeyboardFunc(processKeys);
-	glutKeyboardUpFunc(processKeysUp);
+	player1Control();
+	player2Control();
 
 	setupRC();
 	glutMainLoop();

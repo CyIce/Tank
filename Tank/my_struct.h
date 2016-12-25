@@ -27,10 +27,18 @@ struct Tank
 
 };
 
-struct shell
+struct Shell
 {
+	//当前子弹的位置；
 	Vector3 position;
-	Vector3 direcion;
+	//子弹下一步的位置；
+	Vector3 increment;
+	//子弹的存在时间；
 	GLfloat lifetime;
+	//子弹的运动速度；
 	GLfloat speed;
+	//子弹的类型；
+	GLuint type;
+	//指向下一个子弹的指针
+	Shell *next;
 };

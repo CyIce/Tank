@@ -3,6 +3,5 @@
 #include<gl/glut.h>
 
 #include "graphics.h"
-#include "player.h"
-#include "keysInput.h"
+#include "playerControl.h"
 #include "global.h"

@@ -8,5 +8,6 @@
 //创造坦克；
 void generateTank(Tank tank);
 
-//void shell(tank tank,)
+//生成子弹；
+void generateShell(Tank tank);
 

@@ -151,7 +151,7 @@
     <ClInclude Include="keysInput.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="my_struct.h" />
-    <ClInclude Include="player.h" />
+    <ClInclude Include="playerControl.h" />
     <ClInclude Include="prefabs.h" />
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +159,7 @@
     <ClCompile Include="graphics.cpp" />
     <ClCompile Include="keysInput.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="player.cpp" />
+    <ClCompile Include="playerControl.cpp" />
     <ClCompile Include="prefabs.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
