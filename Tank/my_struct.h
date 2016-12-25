@@ -2,7 +2,7 @@
 #include<gl/glut.h>
 
 //定义一个三维的向量；
-struct vector3
+struct Vector3
 {
 	GLfloat x;
 	GLfloat y;
@@ -10,14 +10,14 @@ struct vector3
 };
 
 //定义一个坦克的结构体；
-struct tank
+struct Tank
 {
 	//坦克的位置；
-	vector3 position;
+	Vector3 position;
 	//坦克下一步位置的增量；
-	vector3 increment;
+	Vector3 increment;
 	//坦克的颜色；
-	vector3 RBG;
+	Vector3 RBG;
 	//坦克的运动方向,相对于X轴顺时针旋转的角度；
 	GLfloat direction;
 	//坦克的生命值；
@@ -29,8 +29,8 @@ struct tank
 
 struct shell
 {
-	vector3 position;
-	vector3 direcion;
+	Vector3 position;
+	Vector3 direcion;
 	GLfloat lifetime;
 	GLfloat speed;
 };

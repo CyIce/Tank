@@ -1,7 +1,7 @@
 
 #include "prefabs.h"
 
-void generateTank(tank tank)
+void generateTank(Tank tank)
 {
 
 	//Ğı×ªÌ¹¿Ë;

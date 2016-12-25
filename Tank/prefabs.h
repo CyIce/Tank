@@ -6,7 +6,7 @@
 #define PI 3.141592657
 
 //´´ÔìÌ¹¿Ë£»
-void generateTank(tank tank);
+void generateTank(Tank tank);
 
 //void shell(tank tank,)
 
