@@ -19,7 +19,7 @@ struct Tank
 	//坦克的颜色；
 	Vector3 RBG;
 	//坦克的运动方向,相对于X轴顺时针旋转的角度；
-	GLfloat direction;
+	GLuint direction;
 	//坦克的生命值；
 	GLfloat HP;
 	//坦克的速度；
@@ -33,8 +33,8 @@ struct Shell
 	Vector3 position;
 	//子弹下一步的位置；
 	Vector3 increment;
-	//子弹的存在时间；
-	GLfloat lifetime;
+	//子弹的最大运动距离；
+	GLuint power;
 	//子弹的运动速度；
 	GLfloat speed;
 	//子弹的类型；

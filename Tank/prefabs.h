@@ -9,5 +9,5 @@
 void generateTank(Tank tank);
 
 //Éú³É×Óµ¯£»
-void generateShell(Tank tank);
+void generateShell(Shell shell);
 

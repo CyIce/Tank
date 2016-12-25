@@ -5,7 +5,13 @@ GLfloat windowWidth;
 GLfloat windowHeight;
 Tank player1;
 Tank player2;
-Tank enemy[20];
+
+Tank *enemyHead = nullptr;
+Tank *enemyTail = nullptr;
+
+Shell *shellHead = nullptr;
+Shell *shellTail = nullptr;
+
 Vector3 color[14] = 
 {
 	{0,0,0},//ºÚ£»
