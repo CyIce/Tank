@@ -1,7 +1,9 @@
 #pragma once
 #include<gl/glut.h>
+
 #include "global.h"
 #include "prefabs.h"
+#include "shellControl.h"
 
 //Çå³ý´°¿ÚÑÕÉ«£»
 void setupRC();

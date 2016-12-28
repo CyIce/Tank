@@ -41,4 +41,6 @@ struct Shell
 	GLuint type;
 	//指向下一个子弹的指针
 	Shell *next;
+	//判断子弹是否存在；
+	GLboolean isAlive;
 };

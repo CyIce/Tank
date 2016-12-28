@@ -36,7 +36,7 @@
     <ClInclude Include="playerControl.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="shell.h">
+    <ClInclude Include="shellControl.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,7 +59,7 @@
     <ClCompile Include="playerControl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="shell.cpp">
+    <ClCompile Include="shellControl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

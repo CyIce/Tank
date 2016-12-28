@@ -6,11 +6,11 @@ GLfloat windowHeight;
 Tank player1;
 Tank player2;
 
-Tank *enemyHead = nullptr;
-Tank *enemyTail = nullptr;
+Tank *enemyHead = NULL;
+Tank *enemyTail = NULL;
 
-Shell *shellHead = nullptr;
-Shell *shellTail = nullptr;
+Shell *shellHead = NULL;
+Shell *shellTail = NULL;
 
 Vector3 color[14] = 
 {
@@ -31,8 +31,8 @@ Vector3 color[14] =
 };
 Vector3 direction[4]=
 {
-	{-1, 0, 0},
 	{ 0, 1, 0},
 	{ 1, 0, 0},
-	{ 0,-1, 0}
+	{ 0,-1, 0},
+	{-1, 0, 0}
 };

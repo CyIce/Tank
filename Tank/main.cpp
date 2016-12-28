@@ -8,6 +8,7 @@ int main()
 	glutDisplayFunc(renderScene);
 	glutReshapeFunc(changeSize);
 	glutTimerFunc(20, playMoving, 1);
+	glutTimerFunc(20, shellMoving, 1);
 
 	player1Control();
 	player2Control();

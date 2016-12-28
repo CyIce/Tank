@@ -88,7 +88,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,7 +153,7 @@
     <ClInclude Include="my_struct.h" />
     <ClInclude Include="playerControl.h" />
     <ClInclude Include="prefabs.h" />
-    <ClInclude Include="shell.h" />
+    <ClInclude Include="shellControl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="global.cpp" />
@@ -162,7 +162,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playerControl.cpp" />
     <ClCompile Include="prefabs.cpp" />
-    <ClCompile Include="shell.cpp" />
+    <ClCompile Include="shellControl.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

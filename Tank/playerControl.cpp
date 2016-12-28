@@ -3,7 +3,6 @@
 
 void player1Control()
 {
-	glutKeyboardFunc(player1Keys);
 	glutSpecialFunc(player1SpecialKeys);
 	glutSpecialUpFunc(player1SpecialKeysUp);
 }

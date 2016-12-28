@@ -4,4 +4,5 @@
 
 #include "graphics.h"
 #include "playerControl.h"
+#include "shellControl.h"
 #include "global.h"

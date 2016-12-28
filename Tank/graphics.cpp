@@ -14,6 +14,7 @@ void renderScene()
 
 	generateTank(player2);
 
+	shellShowing();
 
 	glutSwapBuffers();
 }
