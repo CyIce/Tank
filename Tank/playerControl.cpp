@@ -15,8 +15,15 @@ void player2Control()
 
 void playMoving(GLint value)
 {
+
 	player1.position.x += player1.increment.x;
 	player1.position.y += player1.increment.y;
+
+	if(map[player1.position.x +  10][player1.position.y +  10] == 1)
+	{
+		player1.position.x -= player1.increment.x;
+		player1.position.y -= player1.increment.y;
+	}
 
 	player2.position.x += player2.increment.x;
 	player2.position.y += player2.increment.y;

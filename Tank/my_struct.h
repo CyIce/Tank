@@ -1,25 +1,33 @@
 #pragma once
 #include<gl/glut.h>
 
-//定义一个三维的向量；
-struct Vector3
+//定义一个浮点型的三维的向量；
+struct Vector3f
 {
 	GLfloat x;
 	GLfloat y;
 	GLfloat z;
 };
 
+//定义一个整型的三维的向量；
+struct Vector3i
+{
+	GLint x;
+	GLint y;
+	GLint z;
+};
+
 //定义一个坦克的结构体；
 struct Tank
 {
 	//坦克的位置；
-	Vector3 position;
+	Vector3i position;
 	//坦克下一步位置的增量；
-	Vector3 increment;
+	Vector3i increment;
 	//坦克的颜色；
-	Vector3 RBG;
+	Vector3f RBG;
 	//坦克的运动方向,相对于X轴顺时针旋转的角度；
-	GLuint direction;
+	GLint direction;
 	//坦克的生命值；
 	GLfloat HP;
 	//坦克的速度；
@@ -30,15 +38,15 @@ struct Tank
 struct Shell
 {
 	//当前子弹的位置；
-	Vector3 position;
+	Vector3i position;
 	//子弹下一步的位置；
-	Vector3 increment;
+	Vector3i increment;
 	//子弹的最大运动距离；
-	GLuint power;
+	GLint power;
 	//子弹的运动速度；
 	GLfloat speed;
 	//子弹的类型；
-	GLuint type;
+	GLint type;
 	//指向下一个子弹的指针
 	Shell *next;
 	//判断子弹是否存在；

@@ -1,4 +1,3 @@
-
 #include "graphics.h"
 
 void setupRC()
@@ -13,6 +12,8 @@ void renderScene()
 	generateTank(player1);
 
 	generateTank(player2);
+
+	generateBlock(0,0,0);
 
 	shellShowing();
 
@@ -45,4 +46,6 @@ void changeSize(GLsizei w, GLsizei h)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+
+	boundary();
 }

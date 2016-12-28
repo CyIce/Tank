@@ -77,3 +77,9 @@ void generateShell(Shell shell)
 
 	glEnd();
 }
+
+void generateBlock(GLint x, GLint y, GLint color)
+{
+	glColor3f(0.7, 0.5, 0.7);
+	glRectf(100,100,110,110);
+}

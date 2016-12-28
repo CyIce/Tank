@@ -1,8 +1,11 @@
 
 #include"global.h"
 
-GLfloat windowWidth;
-GLfloat windowHeight;
+GLint windowWidth;
+GLint windowHeight;
+
+GLint map[251][481];
+
 Tank player1;
 Tank player2;
 
@@ -12,7 +15,7 @@ Tank *enemyTail = NULL;
 Shell *shellHead = NULL;
 Shell *shellTail = NULL;
 
-Vector3 color[14] = 
+Vector3f color[14] = 
 {
 	{0,0,0},//ºÚ£»
 	{1,0,0},//ºì£»
@@ -29,7 +32,7 @@ Vector3 color[14] =
 	{0.6f,0.4f,0.7f},//×Ïºì£»
 	{1,1,1}//°×£»
 };
-Vector3 direction[4]=
+Vector3i direction[4]=
 {
 	{ 0, 1, 0},
 	{ 1, 0, 0},

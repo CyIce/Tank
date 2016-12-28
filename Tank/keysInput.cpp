@@ -57,7 +57,7 @@ void player2KeysUp(unsigned char key, int x, int y)
 	}
 }
 
-void changeNestStep(GLfloat * value, GLfloat flag)
+void changeNestStep(GLint * value, GLint flag)
 {
 	if (*value == flag)
 	{

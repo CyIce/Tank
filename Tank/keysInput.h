@@ -17,4 +17,4 @@ void player2KeysUp(unsigned char key, int x, int y);
 
 
 //在按键抬起时改变玩家下一步的动作；
-void changeNestStep(GLfloat *value, GLfloat flag);
+void changeNestStep(GLint *value, GLint flag);

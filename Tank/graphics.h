@@ -4,6 +4,7 @@
 #include "global.h"
 #include "prefabs.h"
 #include "shellControl.h"
+#include "collision.h"
 
 //Çå³ý´°¿ÚÑÕÉ«£»
 void setupRC();

@@ -11,3 +11,6 @@ void generateTank(Tank tank);
 //生成子弹；
 void generateShell(Shell shell);
 
+//生成障碍物；
+void generateBlock(GLint x, GLint y,GLint color);
+
