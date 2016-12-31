@@ -10,8 +10,12 @@
 extern GLint windowWidth;
 extern GLint windowHeight;
 
-//定义游戏地图；
-extern GLint map[251][481];
+//定义游戏地图,map中0.1.2.3.4分别为可移动，玩家1，玩家2，子弹；
+extern GLint map[800][800];
+
+//游戏地图的实际大小；
+extern GLint mapWidth;
+extern GLint mapHeight;
 
 //玩家坦克；
 extern Tank player1;

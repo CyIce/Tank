@@ -4,7 +4,10 @@
 GLint windowWidth;
 GLint windowHeight;
 
-GLint map[251][481];
+GLint map[800][800];
+
+GLint mapWidth;
+GLint mapHeight;
 
 Tank player1;
 Tank player2;

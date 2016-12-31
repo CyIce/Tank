@@ -13,7 +13,7 @@ void renderScene()
 
 	generateTank(player2);
 
-	generateBlock(0,0,0);
+	//generateBlock(0,0,0);
 
 	shellShowing();
 
@@ -46,6 +46,9 @@ void changeSize(GLsizei w, GLsizei h)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+
+	mapWidth = int(windowWidth*1.6);
+	mapHeight = windowHeight;
 
 	boundary();
 }

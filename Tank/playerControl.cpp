@@ -28,6 +28,12 @@ void playMoving(GLint value)
 	player2.position.x += player2.increment.x;
 	player2.position.y += player2.increment.y;
 
+	if (map[player2.position.x + 10][player2.position.y + 10] == 1)
+	{
+		player2.position.x -= player2.increment.x;
+		player2.position.y -= player2.increment.y;
+	}
+
 	glutPostRedisplay();
 	glutTimerFunc(20, playMoving, 1);
 }

@@ -4,6 +4,8 @@ int main()
 {
 	player1.position.x = 100;
 	player1.position.y = 100;
+	player2.position.x = 50;
+	player2.position.y = 100;
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutCreateWindow("Tank");
 	glutDisplayFunc(renderScene);
