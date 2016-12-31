@@ -1,6 +1,6 @@
 #include "collision.h"
 
-void boundary()
+void gameBoundary()
 {
 	int i, j;
 
@@ -23,4 +23,9 @@ void boundary()
 			map[mapWidth-10+j][i] = 1;
 		}
 	}
+}
+
+void tankBoundary(Tank tank)
+{
+
 }

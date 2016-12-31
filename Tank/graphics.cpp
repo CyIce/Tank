@@ -50,5 +50,5 @@ void changeSize(GLsizei w, GLsizei h)
 	mapWidth = int(windowWidth*1.6);
 	mapHeight = windowHeight;
 
-	boundary();
+	gameBoundary();
 }

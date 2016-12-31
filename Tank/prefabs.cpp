@@ -63,6 +63,11 @@ void generateTank(Tank tank)
 	glColor3f(tank.RBG.x, tank.RBG.y, tank.RBG.z);
 	glRectf(tank.position.x + 9, tank.position.y + 7, tank.position.x + 11, tank.position.y + 19);
 
+
+	//test;
+	glColor3f(1, 0.3, 0);
+	glRectf(tank.position.x, tank.position.y, tank.position.x + 2, tank.position.y + 2);
+
 	glPopMatrix();
 }
 
