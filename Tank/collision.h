@@ -9,3 +9,6 @@ void gameBoundary();
 
 //初始化坦克的边界；
 void tankBoundary(Tank tank);
+
+//随着坦克的运动改变坦克的边界；
+void changeTankBoundary(Tank tank);

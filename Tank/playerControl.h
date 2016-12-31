@@ -3,6 +3,7 @@
 
 #include"global.h"
 #include "keysInput.h"
+#include "collision.h"
 
 //Íæ¼Ò1£»
 void player1Control();
