@@ -42,6 +42,18 @@
     <ClInclude Include="collision.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="tankControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="initialization.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="destroy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="global.cpp">
@@ -66,6 +78,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="collision.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tankControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="initialization.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="destroy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

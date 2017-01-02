@@ -9,11 +9,16 @@ GLint map[800][800];
 GLint mapWidth;
 GLint mapHeight;
 
-Tank player1;
-Tank player2;
+Tank *player1;
+Tank *player2;
 
-Tank *enemyHead = NULL;
-Tank *enemyTail = NULL;
+Vector3i player1Position = { 20 ,20,0 };
+Vector3i player2Position = { 200,20,0 };
+
+Vector3i enemyPosition = { 65,20,0 };
+
+Tank *tankHead = NULL;
+Tank *tankTail = NULL;
 
 Shell *shellHead = NULL;
 Shell *shellTail = NULL;

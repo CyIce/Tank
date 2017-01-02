@@ -26,12 +26,20 @@ struct Tank
 	Vector3i increment;
 	//坦克的颜色；
 	Vector3f RBG;
+	//坦克的种类；
+	GLint type;
 	//坦克的运动方向,相对于X轴顺时针旋转的角度；
 	GLint direction;
 	//坦克的生命值；
 	GLfloat HP;
 	//坦克的速度；
 	GLfloat speed;
+	//坦克发射子弹的时间间隔；
+	GLfloat time;
+	//指向下一个坦克的指针;
+	Tank *next;
+	//判断坦克是否存在；
+	GLboolean isAlive;
 
 };
 

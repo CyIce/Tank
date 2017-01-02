@@ -18,13 +18,20 @@ extern GLint mapWidth;
 extern GLint mapHeight;
 
 //玩家坦克；
-extern Tank player1;
-extern Tank player2;
+extern Tank *player1;
+extern Tank *player2;
 
-//敌方坦克的头指针；
-extern Tank *enemyHead;
-//敌方坦克的尾指针；
-extern Tank *enemyTail;
+//玩家坦克的初始位置；
+extern Vector3i player1Position;
+extern Vector3i player2Position;
+
+//敌方坦克的初始位置；
+extern Vector3i enemyPosition;
+
+//坦克的头指针；
+extern Tank *tankHead;
+//坦克的尾指针；
+extern Tank *tankTail;
 
 //游戏物体的颜色；
 extern Vector3f color[14];

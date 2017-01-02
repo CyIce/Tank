@@ -1,5 +1,5 @@
 #include "shellControl.h"
-
+#include<stdio.h>
 void shellAdd(Tank tank)
 {
 	Shell *shell = (Shell*)malloc(sizeof(Shell));
@@ -12,31 +12,34 @@ void shellAdd(Tank tank)
 	//根据坦克方向计算子弹的初始位置；
 	if (tank.direction == 0)
 	{
-		shell->position.x = tank.position.x;
-		shell->position.y = tank.position.y + 20;
+		shell->position.x = tank.position.x + 10;
+		shell->position.y = tank.position.y + 18;
 		shell->position.z = tank.position.z;
 	}
 	else if (tank.direction == 90)
 	{
-		shell->position.x = tank.position.x + 13;
-		shell->position.y = tank.position.y + 7;
+		shell->position.x = tank.position.x + 16;
+		shell->position.y = tank.position.y + 10;
 		shell->position.z = tank.position.z;
 	}
 	else if (tank.direction == 180)
 	{
-		shell->position.x = tank.position.x ;
-		shell->position.y = tank.position.y - 5;
+		shell->position.x = tank.position.x +10;
+		shell->position.y = tank.position.y + 2;
 		shell->position.z = tank.position.z;
 	}
 	else if (tank.direction == 270)
 	{
-		shell->position.x = tank.position.x - 13;
-		shell->position.y = tank.position.y + 7;
+		shell->position.x = tank.position.x + 2;
+		shell->position.y = tank.position.y + 10;
 		shell->position.z = tank.position.z;
 	}
 
 	//根据坦克方向计算子弹的运动方向；
 	shell->increment = direction[(tank.direction / 90)];
+
+	//初始化子弹的边界；
+	shellBoundary(shell);
 
 	//初始化子弹的最大运动距离；
 	shell->power = 10;
@@ -44,10 +47,10 @@ void shellAdd(Tank tank)
 	//初始化子弹的速度；
 	shell->speed = 5;
 
-	//初始化子弹的类型；
+	//记录子弹的类型；
 	shell->type = 1;
 
-	//子弹的存在状态；
+	//初始化子弹的存在状态；
 	shell->isAlive = GL_TRUE;
 
 	if (shellHead == NULL)
@@ -73,13 +76,40 @@ void shellMoving(GLint value)
 
 	while (shellPoint!=NULL)
 	{
+		if (shellPoint->position.x > 0 && shellPoint->position.y > 0 && shellPoint->position.x < mapWidth && shellPoint->position.y < windowHeight)
+		{
+			map[shellPoint->position.x][shellPoint->position.y] = 0;
+		}
+
 		shellPoint->position.x += shellPoint->increment.x*shellPoint->speed;
 		shellPoint->position.y += shellPoint->increment.y*shellPoint->speed;
 		shellPoint->position.z += shellPoint->increment.z*shellPoint->speed;
 
+		if (shellPoint->position.x <= 0 || shellPoint->position.y <= 0 || shellPoint->position.x >= windowWidth || shellPoint->position.y >= windowHeight)
+		{
+			shellPoint->isAlive = GL_FALSE;
+			//continue;
+		}
+		else if(shellPoint->position.x > 0 && shellPoint->position.y > 0 && shellPoint->position.x < windowWidth && shellPoint->position.y < windowHeight)
+		{
+			if (map[shellPoint->position.x][shellPoint->position.y] > 8)
+			{
+				destroyTank(map[shellPoint->position.x][shellPoint->position.y]);
+				map[shellPoint->position.x][shellPoint->position.y] = 0;
+			}
+			else
+			{
+				map[shellPoint->position.x][shellPoint->position.y] = 4;
+			}
+
+		}
+
+
+
 		shellPoint = shellPoint->next;
 	}
-
+	shellDelete();
+	glutPostRedisplay();
 	glutTimerFunc(20, shellMoving, 1);
 }
 
@@ -100,7 +130,7 @@ void shellShowing()
 	}
 }
 
-void sheelDelete()
+void shellDelete()
 {
 	Shell *shellPoint1, *shellPoint2;
 
@@ -118,7 +148,7 @@ void sheelDelete()
 		shellPoint2 = shellPoint1;
 		shellPoint1 = shellPoint1->next;
 
-		if ((shellPoint1 != NULL) && (shellPoint1->isAlive == false))
+		if ((shellPoint1 != NULL) && (shellPoint1->isAlive == GL_FALSE))
 		{
 			shellPoint2->next = shellPoint1->next;
 			free(shellPoint1);

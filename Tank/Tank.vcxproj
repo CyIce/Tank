@@ -150,25 +150,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AI.h" />
     <ClInclude Include="collision.h" />
+    <ClInclude Include="destroy.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="initialization.h" />
     <ClInclude Include="keysInput.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="my_struct.h" />
     <ClInclude Include="playerControl.h" />
     <ClInclude Include="prefabs.h" />
     <ClInclude Include="shellControl.h" />
+    <ClInclude Include="tankControl.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AI.cpp" />
     <ClCompile Include="collision.cpp" />
+    <ClCompile Include="destroy.cpp" />
     <ClCompile Include="global.cpp" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="initialization.cpp" />
     <ClCompile Include="keysInput.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playerControl.cpp" />
     <ClCompile Include="prefabs.cpp" />
     <ClCompile Include="shellControl.cpp" />
+    <ClCompile Include="tankControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

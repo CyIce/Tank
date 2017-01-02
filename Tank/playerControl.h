@@ -10,8 +10,3 @@ void player1Control();
 
 //Íæ¼Ò2£»
 void player2Control();
-
-
-
-//Íæ¼ÒÒÆ¶¯£»
-void playMoving(GLint value);

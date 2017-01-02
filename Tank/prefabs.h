@@ -14,3 +14,5 @@ void generateShell(Shell shell);
 //Éú³ÉÕÏ°­Îï£»
 void generateBlock(GLint x, GLint y,GLint color);
 
+void test();
+

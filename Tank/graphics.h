@@ -5,6 +5,7 @@
 #include "prefabs.h"
 #include "shellControl.h"
 #include "collision.h"
+#include "tankControl.h"
 
 //Çå³ý´°¿ÚÑÕÉ«£»
 void setupRC();

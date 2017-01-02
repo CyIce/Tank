@@ -8,7 +8,7 @@ void gameBoundary()
 	for (i = 0; i <= windowWidth; i++)
 	{
 		map[i][0] = 3;
-		for (j = 0; j <= 10; j++)
+		for (j = 0; j <= 1; j++)
 		{			
 			map[i][windowHeight - j] = 3;
 		}
@@ -25,34 +25,61 @@ void tankBoundary(Tank tank)
 {
 	int i, j;
 
-	for (i = 0; i <= 20; i++)
+	for (i = 1; i <= 19; i++)
 	{
-		for (j = 0; j <= 20; j++)
+		for (j = 1; j <= 19; j++)
 		{
-			map[tank.position.x + i][tank.position.y + j] = 1;
+			map[tank.position.x + i][tank.position.y + j] = tank.type;
 		}
 	}
 
 }
 
-void changeTankBoundary(Tank tank)
+void changeTankBoundary(Tank *tank)
 {
 	int i;
 
-	if (tank.increment.x != 0)
+	if (tank->direction == 0)
 	{
-		for (i = 0; i <= 15; i++)
+		for (i = 1; i <= 19; i++)
 		{
-			map[tank.position.x][i] = 0;
-			map[tank.position.x + tank.increment.x * 20][i] = 1;
+			map[tank->position.x + i][tank->position.y] = 0;
+			map[tank->position.x + i][tank->position.y + 19] = tank->type;
 		}
 	}
-	else if (tank.increment.y != 0)
+	else if (tank->direction == 90)
 	{
-		for (i = 0; i <= 15; i++)
+		for (i = 1; i <= 19; i++)
 		{
-			map[i][tank.position.y] = 0;
-			map[i][tank.position.y + tank.increment.y * 10] = 1;
+			map[tank->position.x + 19][tank->position.y +i] = tank->type;
+			map[tank->position.x][tank->position.y + i] = 0;
 		}
 	}
+	else if (tank->direction == 180)
+	{
+		for (i = 1; i <= 19; i++)
+		{
+			map[tank->position.x + i][tank->position.y + 1] = tank->type;
+			map[tank->position.x + i][tank->position.y + 20] = 0;
+		}
+	}
+	else if (tank->direction == 270)
+	{
+		for (i = 1; i <= 19; i++)
+		{
+			map[tank->position.x + 1][tank->position.y + i] = tank->type;
+			map[tank->position.x + 20][tank->position.y + i] = 0;
+		}
+	}
+}
+
+void shellBoundary(Shell * shell)
+{
+	if (shell->position.x > 0 && shell->position.y > 0 && shell->position.x < mapWidth && shell->position.y < windowHeight)
+	{
+		map[shell->position.x][shell->position.y] = 4;
+	}
+
+	shell->isAlive = GL_FALSE;
+
 }

@@ -11,4 +11,7 @@ void gameBoundary();
 void tankBoundary(Tank tank);
 
 //随着坦克的运动改变坦克的边界；
-void changeTankBoundary(Tank tank);
+void changeTankBoundary(Tank *tank);
+
+//子弹的边界；
+void shellBoundary(Shell *shell);

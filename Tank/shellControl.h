@@ -4,6 +4,8 @@
 #include "my_struct.h"
 #include "global.h"
 #include "prefabs.h"
+#include "collision.h"
+#include "destroy.h"
 
 //在地图上添加一个子弹；
 void shellAdd(Tank tank);
