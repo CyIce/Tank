@@ -92,18 +92,16 @@ void shellMoving(GLint value)
 		}
 		else if(shellPoint->position.x > 0 && shellPoint->position.y > 0 && shellPoint->position.x < windowWidth && shellPoint->position.y < windowHeight)
 		{
-			if (map[shellPoint->position.x][shellPoint->position.y] >= 10 && shellPoint->type < 10)
+			if (map[shellPoint->position.x][shellPoint->position.y] >= 10 && shellPoint->type <= 2)
 			{
-				maxTankNum--;
-
 				if (shellPoint->type == 1)
 				{
-					player1Score++;
+					player1Score++;				
 				}
 				else if (shellPoint->type == 2)
 				{
 					player2Score++;
-				}
+				}  
 
 				destroyTank(map[shellPoint->position.x][shellPoint->position.y]);
 				map[shellPoint->position.x][shellPoint->position.y] = 0;
@@ -121,9 +119,6 @@ void shellMoving(GLint value)
 			}
 
 		}
-
-
-
 		shellPoint = shellPoint->next;
 	}
 	shellDelete();

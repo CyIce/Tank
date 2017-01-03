@@ -118,39 +118,21 @@ void updateRank()
 	fclose(fp2);
 	fclose(fp3);
 
-	if (player1Score > Gold)
+	if (player1Score + player2Score > Gold)
 	{
-		Gold = player1Score;
+		Bronze = Silver;
 		Silver = Gold;
-		Bronze = Silver;
+		Gold = player1Score + player2Score;		
 	}
-	else if (player1Score > Silver)
+	else if (player1Score + player2Score > Silver)
 	{
-		Silver = player1Score;
 		Bronze = Silver;
+		Silver = player1Score + player2Score;	
 	}
-	else if (player1Score > Bronze)
+	else if (player1Score + player2Score > Bronze)
 	{
 		Bronze = player1Score;
 	}
-
-	if (player2Score > Gold)
-	{
-		Gold = player1Score;
-		Silver = Gold;
-		Bronze = Silver;
-	}
-	else if (player2Score > Silver)
-	{
-		Silver = player1Score;
-		Bronze = Silver;
-	}
-	else if (player2Score > Bronze)
-	{
-		Bronze = player2Score;
-	}
-
-	printf("%d  %d  %d\n", Gold, Silver, Bronze);
 
 	if ((fp1 = fopen("Gold", "w")) == NULL)
 	{

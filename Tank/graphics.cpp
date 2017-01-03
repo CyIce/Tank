@@ -2,7 +2,7 @@
 
 void setupRC()
 {
-	glClearColor(0, 0, 1, 1);
+	glClearColor(0.5, 1, 1, 1);
 }
 
 void renderScene()

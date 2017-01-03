@@ -15,8 +15,8 @@ Tank *player2;
 GLint player1Score;
 GLint player2Score;
 
-Vector3i player1Position = { 20 ,20,0 };
-Vector3i player2Position = { 200,20,0 };
+Vector3i player1Position = { 200 ,20,0 };
+Vector3i player2Position = { 20,20,0 };
 
 Vector3i enemyPosition = { 380,210,0 };
 

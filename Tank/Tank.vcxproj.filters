@@ -80,9 +80,6 @@
     <ClCompile Include="playerControl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="shellControl.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="collision.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -102,6 +99,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shellControl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

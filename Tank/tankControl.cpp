@@ -171,6 +171,8 @@ void tankMoving(GLint value)
 
 void tankShowing()
 {
+	int numbers = 0;
+
 	Tank *tankPoint;
 
 	tankPoint = tankHead;
@@ -180,10 +182,13 @@ void tankShowing()
 		if (tankPoint->isAlive == GL_TRUE)
 		{
 			generateTank(*tankPoint);
+			numbers++;
 		}
 
 		tankPoint = tankPoint->next;
 	}
+
+	maxTankNum = numbers;
 }
 
 void tankDelete()
@@ -204,21 +209,21 @@ void tankDelete()
 		tankPoint2 = tankPoint1;
 		tankPoint1 = tankPoint1->next;
 
-		if ((tankPoint1 != NULL) && (tankPoint1->isAlive == false))
+		if ((tankPoint1 != NULL) && (tankPoint1->isAlive == GL_FALSE))
 		{
-			tankPoint2->next = tankPoint1->next;
-			free(tankPoint1);
-			tankPoint1 = tankPoint2;
+			//tankPoint2->next = tankPoint1->next;
+			//free(tankPoint1);
+			//tankPoint1 = tankPoint2;
 		}
 	}
 }
 
 void tankAppend(GLint value)
 {
-	int i, lv=50;
-	if (clock() - lastTime > 3000 && maxTankNum < 6)
-	{
+	int lv=50;
 
+	if (clock() - lastTime > 3000 && maxTankNum <= 6)
+	{
 		lastTime = clock();
 
 		if (colorNum >= 12)
@@ -235,7 +240,6 @@ void tankAppend(GLint value)
 		colorNum++;
 
 		num+=1;
-		maxTankNum += 2;
 	}
 
 	glutTimerFunc(100, tankAppend, 1);
