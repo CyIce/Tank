@@ -11,6 +11,9 @@ int main()
 	glutReshapeFunc(changeSize);
 	glutTimerFunc(20, tankMoving, 1);
 	glutTimerFunc(20, shellMoving, 1);
+	glutTimerFunc(100, tankAppend, 1);
+	glutTimerFunc(100, gameOver, 1);
+
 
 	player1Control();
 	player2Control();

@@ -1,6 +1,8 @@
 #pragma once
 #include<stdlib.h>
+#include<time.h>
 
+#include<gl/glut.h>
 #include "my_struct.h"
 #include "global.h"
 #include "prefabs.h"
@@ -18,3 +20,6 @@ void tankShowing();
 
 //销毁坦克；
 void tankDelete();
+
+//不断添加坦克；
+void tankAppend(GLint value);

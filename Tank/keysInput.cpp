@@ -5,7 +5,7 @@
 
 void player1SpecialKeys(int key, int x, int y)
 {
-	if (player1 == NULL)
+	if (gameState == 1 || gameState>=3)
 	{
 		return;
 	}
@@ -23,7 +23,7 @@ void player1SpecialKeys(int key, int x, int y)
 
 void player1SpecialKeysUp(int key, int x, int y)
 {
-	if (player1 == NULL)
+	if (gameState == 1 || gameState >= 3)
 	{
 		return;
 	}
@@ -40,7 +40,7 @@ void player1SpecialKeysUp(int key, int x, int y)
 
 void player2Keys(unsigned char key, int x, int y)
 {
-	if (player2 == NULL)
+	if (gameState == 2 || gameState >= 3)
 	{
 		return;
 	}
@@ -51,8 +51,6 @@ void player2Keys(unsigned char key, int x, int y)
 	case 's' :case 'S':	player2->increment = direction[2]; player2->direction = 180; break;
 	case 'w' :case 'W':	player2->increment = direction[0]; player2->direction =   0; break;
 
-	//玩家1发射子弹；
-	//case GLUT_KEY_HOME: shellAdd(*player1); break;
 	//玩家2发射子弹；
 	case 32: shellAdd(*player2); break;
 	default:break;
@@ -61,7 +59,7 @@ void player2Keys(unsigned char key, int x, int y)
 
 void player2KeysUp(unsigned char key, int x, int y)
 {
-	if (player2 == NULL)
+	if (gameState == 2 || gameState >= 3)
 	{
 		return;
 	}

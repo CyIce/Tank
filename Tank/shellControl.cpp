@@ -4,7 +4,7 @@ void shellAdd(Tank tank)
 {
 	Shell *shell = (Shell*)malloc(sizeof(Shell));
 
-	if (shell == NULL)
+	if (shell == NULL || &tank == NULL)
 	{
 		return;
 	}
@@ -48,7 +48,7 @@ void shellAdd(Tank tank)
 	shell->speed = 5;
 
 	//记录子弹的类型；
-	shell->type = 1;
+	shell->type = tank.type;
 
 	//初始化子弹的存在状态；
 	shell->isAlive = GL_TRUE;
@@ -92,8 +92,26 @@ void shellMoving(GLint value)
 		}
 		else if(shellPoint->position.x > 0 && shellPoint->position.y > 0 && shellPoint->position.x < windowWidth && shellPoint->position.y < windowHeight)
 		{
-			if (map[shellPoint->position.x][shellPoint->position.y] > 8)
+			if (map[shellPoint->position.x][shellPoint->position.y] >= 10 && shellPoint->type < 10)
 			{
+				maxTankNum--;
+
+				if (shellPoint->type == 1)
+				{
+					player1Score++;
+				}
+				else if (shellPoint->type == 2)
+				{
+					player2Score++;
+				}
+
+				destroyTank(map[shellPoint->position.x][shellPoint->position.y]);
+				map[shellPoint->position.x][shellPoint->position.y] = 0;
+			}
+			else if (map[shellPoint->position.x][shellPoint->position.y] > 0 && map[shellPoint->position.x][shellPoint->position.y] <= 2  && shellPoint->type >= 10)
+			{
+				gameState += map[shellPoint->position.x][shellPoint->position.y];
+
 				destroyTank(map[shellPoint->position.x][shellPoint->position.y]);
 				map[shellPoint->position.x][shellPoint->position.y] = 0;
 			}

@@ -153,6 +153,7 @@
     <ClInclude Include="AI.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="destroy.h" />
+    <ClInclude Include="drawString.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="initialization.h" />
@@ -163,11 +164,13 @@
     <ClInclude Include="prefabs.h" />
     <ClInclude Include="shellControl.h" />
     <ClInclude Include="tankControl.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AI.cpp" />
     <ClCompile Include="collision.cpp" />
     <ClCompile Include="destroy.cpp" />
+    <ClCompile Include="drawString.cpp" />
     <ClCompile Include="global.cpp" />
     <ClCompile Include="graphics.cpp" />
     <ClCompile Include="initialization.cpp" />
@@ -177,6 +180,7 @@
     <ClCompile Include="prefabs.cpp" />
     <ClCompile Include="shellControl.cpp" />
     <ClCompile Include="tankControl.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -68,7 +68,7 @@ void tankMoving(GLint value)
 					int y = tankPoint->position.y + i;
 					if (y <= 0)
 					{
-						if (tankPoint->type == 9)
+						if (tankPoint->type >= 10)
 						{
 							bl = GL_TRUE;
 						}
@@ -78,7 +78,7 @@ void tankMoving(GLint value)
 					{
 						b = GL_FALSE;
 
-						if (tankPoint->type == 9)
+						if (tankPoint->type >= 10)
 						{
 							bl = GL_TRUE;
 						}
@@ -94,7 +94,7 @@ void tankMoving(GLint value)
 				}
 
 			}
-			else if (tankPoint->type >= 8)
+			else if (tankPoint->type >= 10)
 			{
 				bl = GL_TRUE;
 			}
@@ -122,7 +122,7 @@ void tankMoving(GLint value)
 					{
 						if (tankPoint->type == 9)
 						{
-							bl = GL_TRUE;
+							b = GL_TRUE;
 						}
 						break;
 					}
@@ -131,7 +131,7 @@ void tankMoving(GLint value)
 					{
 						b = GL_FALSE;
 
-						if (tankPoint->type == 9)
+						if (tankPoint->type >= 10)
 						{
 							bl = GL_TRUE;
 						}
@@ -146,15 +146,21 @@ void tankMoving(GLint value)
 					changeTankBoundary(tankPoint);
 				}
 			}
-			else if (tankPoint->type == 9)
+			else if (tankPoint->type >= 10)
 			{
 				bl = GL_TRUE;
 			}
 		}
 
-		if (tankPoint->type == 9)
+		//AI1£»
+		if (tankPoint->type >= 10 && tankPoint->type < 50)
 		{
 			enemyAI1(tankPoint, bl);
+		}
+		//AI2;
+		if (tankPoint->type >= 50 && tankPoint->type)
+		{
+			enemyAI2(tankPoint);
 		}
 
 		tankPoint = tankPoint->next;
@@ -205,4 +211,32 @@ void tankDelete()
 			tankPoint1 = tankPoint2;
 		}
 	}
+}
+
+void tankAppend(GLint value)
+{
+	int i, lv=50;
+	if (clock() - lastTime > 3000 && maxTankNum < 6)
+	{
+
+		lastTime = clock();
+
+		if (colorNum >= 12)
+		{
+			colorNum = 0;
+		}
+
+		tankAdd(enemyPosition, num);
+		tankTail->RBG = color[colorNum];
+		colorNum++;
+
+		tankAdd(enemyPosition, lv+num);
+		tankTail->RBG = color[colorNum];
+		colorNum++;
+
+		num+=1;
+		maxTankNum += 2;
+	}
+
+	glutTimerFunc(100, tankAppend, 1);
 }

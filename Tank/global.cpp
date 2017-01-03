@@ -12,10 +12,23 @@ GLint mapHeight;
 Tank *player1;
 Tank *player2;
 
+GLint player1Score;
+GLint player2Score;
+
 Vector3i player1Position = { 20 ,20,0 };
 Vector3i player2Position = { 200,20,0 };
 
-Vector3i enemyPosition = { 65,20,0 };
+Vector3i enemyPosition = { 380,210,0 };
+
+GLint colorNum = 0;
+
+GLint num = 10;
+
+GLfloat lastTime;
+
+GLint gameState = 0;
+
+GLint maxTankNum = 0;
 
 Tank *tankHead = NULL;
 Tank *tankTail = NULL;

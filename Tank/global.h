@@ -21,12 +21,31 @@ extern GLint mapHeight;
 extern Tank *player1;
 extern Tank *player2;
 
+//玩家的分数；
+extern GLint player1Score;
+extern GLint player2Score;
+
 //玩家坦克的初始位置；
 extern Vector3i player1Position;
 extern Vector3i player2Position;
 
 //敌方坦克的初始位置；
 extern Vector3i enemyPosition;
+
+//敌方坦克的颜色；
+extern GLint colorNum;
+
+//敌方坦克的编号；
+extern GLint num;
+
+//游戏中最大敌方坦克数目；
+extern GLint maxTankNum;
+
+//上一次坦克的时间；
+extern 	GLfloat lastTime;
+
+//游戏状态；
+extern GLint gameState;
 
 //坦克的头指针；
 extern Tank *tankHead;

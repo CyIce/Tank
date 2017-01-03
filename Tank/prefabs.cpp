@@ -1,8 +1,6 @@
 
 #include "prefabs.h"
 
-#include "global.h"
-
 void generateTank(Tank tank)
 {
 	//test();

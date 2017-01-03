@@ -1,7 +1,8 @@
 #pragma once
+#include<math.h>
 
 #include"my_struct.h"
-#include<math.h>
+#include "global.h"
 
 #define PI 3.141592657
 

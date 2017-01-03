@@ -11,6 +11,7 @@ void initializate()
 	player1->RBG = color[5];
 	player2->RBG = color[9];
 
-	tankAdd(enemyPosition, 9);
+	//tankAdd(enemyPosition, 22);
+	//tankAdd(enemyPosition, 60);
 
 }

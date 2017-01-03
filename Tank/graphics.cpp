@@ -17,6 +17,8 @@ void renderScene()
 
 	shellShowing();
 
+	score();
+
 	glutSwapBuffers();
 }
 
